@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Energy</title>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:600,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="styles/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  </head>
+  <body>
+    <script src="js/wow.min.js"></script>
+	<script src="js/links.js"></script>
+	<style>
+      body{
+        background-color: lightblue;
+        font-family: 'Dosis', sans-serif;
+        color: white;
+		padding-top: 10%;
+
+      }
+	  
+	  	.btn:hover{
+			background-color: lightblue;
+			
+		}
+    </style>
+    <div  class="card animated wow fadeInLeft" align = "center">
+      <h1>Energy</h1>
+      <p class="btn" onclick="gotoGitPage();">By Chris D.</p>
+	  <h2>Energy is measured (SI Unit) in joules and there are 2 main categories of energy. Click one to learn more.</h2>
+	  <div id="social-bar">
+		<ul>
+			<li onclick="gotoPE()" class="btn">Potential Energy</li>
+			<li onclick="gotoKE()" class="btn">Kinetic Energy</li>
+			
+		</ul>
+	  </div>
+    </div>
+	<div class="card animated wow fadeInLeft" align="center">
+		<h2>Law of Conservation of Energy</h2>
+		<p>Energy cannot be created nor destroyed. It can only be converted into another form. For example, a most light bulbs convert electricity into heat and light. This is called <u>energy conversion</u>.</p>
+	</div>
+	<div class="card animated wow fadeInLeft" align="center">
+		<h2>Mechanical Energy</h2>
+		<p>
+			This is a type of energy, but it does not fall under one single category. Thus it has been placed here.
+			<br/>
+			Mechanical energy is a combination of both <span class="btn btnInline" onclick="gotoKE()">kinetic</span> and <span class="btn btnInline" onclick="gotoPE()">potential</span> energy. It can be calculated as the sum of both types.
+		<p>
+	</div>
+  </body>
+</html>
