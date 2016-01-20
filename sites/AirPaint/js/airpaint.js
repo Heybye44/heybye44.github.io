@@ -3,6 +3,7 @@ var ref;
 var mode;
 var leaderSync;
 var followerSync;
+var updateInterval = 175;
 var tools = {
   "draw":null
 }
@@ -32,7 +33,7 @@ $(document).ready(function(){
 
   followerSync = function(){
     ref.once("value", function(snapshot) {
-      canvas.loadFromJSON(JSON.stringify(snapshot.val()));
+      canvas.loadFromJSON(snapshot.val());
       canvas.renderAll();
       console.log("Loaded: " + snapshot.val());
     }, function (errorObject) {
@@ -55,6 +56,9 @@ $(document).ready(function(){
     mode = "leader";
     $("title").text("AirPaint - Leader");
     canvas.isDrawingMode = true;
+    canvas.freeDrawingBrush = new fabric['PencilBrush'](canvas);
+    canvas.freeDrawingBrush.color = 'Black';
+    canvas.freeDrawingBrush.width = 4;
   } else {
     alert("Now, in follower mode.");
     $("title").text("AirPaint - Follower");
@@ -70,6 +74,6 @@ $(document).ready(function(){
     originX: 'center',
     originY: 'center'
   });
-  if(mode == "leader") setInterval(leaderSync, 1000);
-  if(mode == "follower") setInterval(followerSync, 1000);
+  if(mode == "leader") setInterval(leaderSync, updateInterval);
+  if(mode == "follower") setInterval(followerSync, updateInterval);
 });
