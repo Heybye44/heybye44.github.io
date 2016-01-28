@@ -7,16 +7,23 @@
 	padding: 1em;
 	border-radius: 0.5em;
 	position:relative;
-  }
+}
+
+.card img{
+	width: 100%;
+	height: auto;
+	border-radius: 0.5em;
+}
+
 div h1{
 	font-size: 5em;
 }
 
 div h2{
-	font-size: 3em;	
+	font-size: 3em;
 }
 .btn{
-	border-radius: 5px;		
+	border-radius: 5px;
 	list-style: none;
 	display: inline;
 	padding-left: 1.5em;
